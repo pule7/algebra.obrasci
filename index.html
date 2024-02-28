@@ -7,11 +7,44 @@
 </head>
 <body>
     <p>Novi paragraf</p>
-    <p><form action="" method="POST" enctype="text/plain" autocomplete="off" name="kontakt_obrazac"></form>
-        <label for="ime">Ime i prezime</label><br></p>
-    <input type="text" id="ime" required>
-    <p><label for="email">Email</label><br>
-        <input type="email" id="email" required></p>
+    <p><form action="" method="POST" enctype="text/plain" autocomplete="off" name="kontakt_obrazac">
+        <label for="ime">*Korisnik</label><br></p>
+    <input type="text" id="ime" required placeholder="Ana Anić">
+    <p><label for="email">*Email</label><br>
+        <input type="email" id="email" required placeholder="ana8@gmail.com"></p>
+        <p>
+            <label>*Spol:</label><br>
+            <!--
+            <input type="radio" id="ono" name="spol" checked>
+            <label for="ono">Ne želim se identificirati</label>
+            <br>-->
+
+            <input id="musko" type="radio" name="spol" value="Ž">
+            <label for="musko">M</label>
+            <br>
+            
+            <input type="radio" name="spol" id="zensko" value="Ž">
+            <label for="zensko">Ž</label>
+            <br>
+
+            <p><label for="tel">Telefon:</label><br>
+                <input type="tel" id="tel" placeholder="+385 #########"></p>
+            
+            <br>
+
+            <p>
+                <label for="opis">*Opis problema</label>
+                <br>
+                <textarea name="opis" id="opis" cols="50" rows="7" maxlength="200" required></textarea>
+            </p>
+            <p><input type="submit" value="Pošalji"></p>
+            <!--<select name="spol" id="spol">
+                <option value="M">M</option>
+                <option value="Ž">Ž</option>
+            </select>
+        -->
+        </p>
+    </form>
     
 </body>
 </html>
