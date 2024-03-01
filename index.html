@@ -37,6 +37,74 @@
                 <br>
                 <textarea name="opis" id="opis" cols="50" rows="7" maxlength="200" required></textarea>
             </p>
+            
+            <label for="datum">Datum prijave:</label><br>
+            <input type="date" name="" id="datum" min="2024-02-28" max="2024-02-29">
+            <br>
+
+            <label for="dokument">Dokument privitak:</label><br>
+            <input type="file" name="" id="dokument"><br>
+
+            <p>
+                <label for="username">Korisničko ime:</label><br>
+                <!-- obavezno polje, min 3 znaka, a max 10 jer je kupac tako trazio-->
+                <input id="username" type="text" name="username" minlength="3" maxlength="10" size="20" required>
+                <br>
+            </p>
+            <label for="password">Zaporka:</label>
+            <input id="password" type="password">
+
+            <p>
+                <label for="boja">Odaberite boju:</label><br>
+                <input id="boja" type="color">
+            </p>
+
+            <p>
+                <input id="odabir" type="checkbox" checked>
+                <label for="odabir">Želim obavijesti na mail</label>
+                <br>
+                <input id="odabir1" type="checkbox">
+                <label for="odabir1">Suglasan sam za GDPR</label>
+            </p>
+
+            <p>
+                Ocijenite sadržaj stranice <br>
+                <label for="o1">1</label>
+                <input id="o1" type="radio" name="ocjena">
+                <label for="o2">2</label>
+                <input id="o2" type="radio" name="ocjena">
+                <label for="o3">3</label>
+                <input id="o3" type="radio" name="ocjena" checked>
+                <label for="o4">4</label>
+                <input id="o4" type="radio" name="ocjena">
+                <label for="o5">5</label>
+                <input id="o5" type="radio" name="ocjena">
+            </p>
+
+            <p>
+                <label for="grad">Odaberi grad:</label>
+                <select id="grad">
+                    <option>London</option>
+                    <option>Rim</option>
+                    <option>Pariz</option>
+                    <option>Zagreb</option>
+                    <option selected>Osijek</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="grad2">Traži grad</label><br>
+                <input id="grad2" type="text"  list="gradovi">
+                <datalist id="gradovi">
+                    <option>London</option>
+                    <option>Rim</option>
+                    <option>Pariz</option>
+                    <option>Zagreb</option>
+                    <option selected>Osijek</option>
+                </datalist>
+            </p>
+
+
             <p><input type="submit" value="Pošalji"><input type="reset" value="Resetiraj"></p>
             <!--<select name="spol" id="spol">
                 <option value="M">M</option>
