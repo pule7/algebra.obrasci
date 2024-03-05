@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strukturiranje sadržaja</title>
-  </head>
-  <body>
+
+   <style>
+    aside {
+        width: 30px;
+        padding-left:  15px;
+        margin-left: 15px;
+        float: right;
+        font-style: italic;
+        background-color: lightgray;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+    }
+   </style>
+</head>
+
+<body>
     <header>
-      <h1>Moja semantička stranica</h1>
-      <nav>
-        <a href="#">Prazan</a> ||
-        <a href="./obrasci_primjeri.html">Link na primjere obrazaca</a> ||
-        <a href="https://google.hr/ncr" target="_blank">Google</a>
-      </nav>
+        <h1>Moja semantička stranica</h1>
+        <nav>
+            <a href="#">Prazan</a> ||
+            <a href="./obrasci_primjeri.html">Link na primjere obrazaca</a> ||
+            <a href="https://google.hr/ncr" target="_blank">Google</a>
+        </nav>
     </header>
-
     <main>
-      <p>Ovdje se nalazi glavni dio stranice</p>
+        <p>Ovdje se nalazi glavni dio stranice</p>
+        <article>
+            <section>
+                <h2>Prvo poglavlje</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, esse odio ipsa dolor at aperiam sit?
+                    Dolorem vero optio sed, dolores dolor eos fugiat quidem iste veniam accusantium laboriosam laborum.
+                </p>
+                <aside>Cjelina koja nije dio glavnog teksta</aside>
+            </section>
+            <section>
+                <h2>Drugo poglavlje</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, esse odio ipsa dolor at aperiam sit?
+                    Dolorem vero optio sed, dolores dolor eos fugiat quidem iste veniam accusantium laboriosam laborum.
+                </p>
+            </section>
+        </article>
+        <article>
+            <p>samo slike</p>
+            <figure>
+               <p> Ovdje će nam se nalaziti slike o cvijeće</p>
+               <img src="" alt="Slika crvene ruže" width="50px" height="150px">
+               <figcaption>Naziv ili opis slike</figcaption>
+            </figure>
+        </article>
+        
     </main>
+    <footer>
+        <hr>
+        <p>
+            Moje ime firme j.d.o.o.
+        </p>
+    </footer>
+</body>
 
-    <footer>Moje ime firme j.d.o.o.</footer>
-  </body>
 </html>
