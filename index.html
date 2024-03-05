@@ -1,118 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrasci</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strukturiranje sadržaja</title>
+
+   <style>
+    aside {
+        width: 30px;
+        padding-left:  15px;
+        margin-left: 15px;
+        float: right;
+        font-style: italic;
+        background-color: lightgray;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+    }
+   </style>
 </head>
+
 <body>
-    <p>Novi paragraf</p>
-    <p><form action="" method="POST" enctype="text/plain" autocomplete="off" name="kontakt_obrazac">
-        <label for="ime">*Korisnik</label><br></p>
-    <input type="text" id="ime" required placeholder="Ana Anić">
-    <p><label for="email">*Email</label><br>
-        <input type="email" id="email" required placeholder="ana8@gmail.com"></p>
+    <header>
+        <h1>Moja semantička stranica</h1>
+        <nav>
+            <a href="#">Prazan</a> ||
+            <a href="./obrasci_primjeri.html">Link na primjere obrazaca</a> ||
+            <a href="https://google.hr/ncr" target="_blank">Google</a>
+        </nav>
+    </header>
+    <main>
+        <p>Ovdje se nalazi glavni dio stranice</p>
+        <article>
+            <section>
+                <h2>Prvo poglavlje</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, esse odio ipsa dolor at aperiam sit?
+                    Dolorem vero optio sed, dolores dolor eos fugiat quidem iste veniam accusantium laboriosam laborum.
+                </p>
+                <aside>Cjelina koja nije dio glavnog teksta</aside>
+            </section>
+            <section>
+                <h2>Drugo poglavlje</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, esse odio ipsa dolor at aperiam sit?
+                    Dolorem vero optio sed, dolores dolor eos fugiat quidem iste veniam accusantium laboriosam laborum.
+                </p>
+            </section>
+        </article>
+        <article>
+            <p>samo slike</p>
+            <figure>
+               <p> Ovdje će nam se nalaziti slike o cvijeće</p>
+               <img src="" alt="Slika crvene ruže" width="50px" height="150px">
+               <figcaption>Naziv ili opis slike</figcaption>
+            </figure>
+        </article>
+        
+    </main>
+    <footer>
+        <hr>
         <p>
-            <label>*Spol:</label><br>
-            <!--
-            <input type="radio" id="ono" name="spol" checked>
-            <label for="ono">Ne želim se identificirati</label>
-            <br>-->
-
-            <input id="musko" type="radio" name="spol" value="Ž">
-            <label for="musko">M</label>
-            <br>
-            
-            <input type="radio" name="spol" id="zensko" value="Ž">
-            <label for="zensko">Ž</label>
-            <br>
-
-            <p><label for="tel">Telefon:</label><br>
-                <input type="tel" id="tel" placeholder="+385 #########"></p>
-            
-            <br>
-
-            <p>
-                <label for="opis">*Opis problema</label>
-                <br>
-                <textarea name="opis" id="opis" cols="50" rows="7" maxlength="200" required></textarea>
-            </p>
-            
-            <label for="datum">Datum prijave:</label><br>
-            <input type="date" name="" id="datum" min="2024-02-28" max="2024-02-29">
-            <br>
-
-            <label for="dokument">Dokument privitak:</label><br>
-            <input type="file" name="" id="dokument"><br>
-
-            <p>
-                <label for="username">Korisničko ime:</label><br>
-                <!-- obavezno polje, min 3 znaka, a max 10 jer je kupac tako trazio-->
-                <input id="username" type="text" name="username" minlength="3" maxlength="10" size="20" required>
-                <br>
-            </p>
-            <label for="password">Zaporka:</label>
-            <input id="password" type="password">
-
-            <p>
-                <label for="boja">Odaberite boju:</label><br>
-                <input id="boja" type="color">
-            </p>
-
-            <p>
-                <input id="odabir" type="checkbox" checked>
-                <label for="odabir">Želim obavijesti na mail</label>
-                <br>
-                <input id="odabir1" type="checkbox">
-                <label for="odabir1">Suglasan sam za GDPR</label>
-            </p>
-
-            <p>
-                Ocijenite sadržaj stranice <br>
-                <label for="o1">1</label>
-                <input id="o1" type="radio" name="ocjena">
-                <label for="o2">2</label>
-                <input id="o2" type="radio" name="ocjena">
-                <label for="o3">3</label>
-                <input id="o3" type="radio" name="ocjena" checked>
-                <label for="o4">4</label>
-                <input id="o4" type="radio" name="ocjena">
-                <label for="o5">5</label>
-                <input id="o5" type="radio" name="ocjena">
-            </p>
-
-            <p>
-                <label for="grad">Odaberi grad:</label>
-                <select id="grad">
-                    <option>London</option>
-                    <option>Rim</option>
-                    <option>Pariz</option>
-                    <option>Zagreb</option>
-                    <option selected>Osijek</option>
-                </select>
-            </p>
-
-            <p>
-                <label for="grad2">Traži grad</label><br>
-                <input id="grad2" type="text"  list="gradovi">
-                <datalist id="gradovi">
-                    <option>London</option>
-                    <option>Rim</option>
-                    <option>Pariz</option>
-                    <option>Zagreb</option>
-                    <option selected>Osijek</option>
-                </datalist>
-            </p>
-
-
-            <p><input type="submit" value="Pošalji"><input type="reset" value="Resetiraj"></p>
-            <!--<select name="spol" id="spol">
-                <option value="M">M</option>
-                <option value="Ž">Ž</option>
-            </select>
-        -->
+            Moje ime firme j.d.o.o.
         </p>
-    </form>
-    
+    </footer>
 </body>
+
 </html>
